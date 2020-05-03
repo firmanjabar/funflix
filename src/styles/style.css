@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(15, 16, 24);
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 32px auto;
+}
+
+movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding: 16px;
+}
+
+movie-item {
+    width: 200px;
+    margin: 5px;
+}
