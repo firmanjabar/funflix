@@ -2,8 +2,7 @@ import '../component/movie-list.js';
 import '../component/search-bar.js';
 import {
     DataSource,
-    Main,
-    Detail
+    Main
 } from '../data/data-source.js';
 
 const search = () => {
@@ -13,6 +12,7 @@ const search = () => {
     const onButtonSearchClicked = async () => {
         try {
             const result = await DataSource.searchMovie(searchElement.value);
+            document.getElementById("category").innerHTML = `<h4 id="category" class="text-white">${searchElement.value} :</h4>`;
             renderResult(result);
         } catch (message) {
             fallbackResult(message)
@@ -38,7 +38,7 @@ const main = () => {
             const result = await Main.fetchMov();
             renderResult(result);
         } catch (message) {
-            fallbackResult(message)
+            fallbackResult(message);
         }
     };
 
@@ -53,32 +53,7 @@ const main = () => {
     mainView();
 }
 
-const detail = (movie_id) => {
-    const movieElement = document.querySelectorAll("movie-item");
-    const modalElement = document.querySelector("modal-movie");
-
-    const onButtonSearchClicked = async () => {
-        try {
-            const result = await Detail.fetchMov(movie_id);
-            renderResult(result);
-        } catch (message) {
-            fallbackResult(message)
-        }
-    };
-
-    const renderResult = results => {
-        modalElement.movies = results;
-    };
-
-    const fallbackResult = message => {
-        modalElement.renderError(message);
-    };
-
-    movieElement.clickEvent = onButtonSearchClicked;
-};
-
 export {
     main,
-    search,
-    detail
+    search
 }

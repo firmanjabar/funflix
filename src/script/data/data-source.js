@@ -20,24 +20,7 @@ class DataSource {
 
 class Main {
     static fetchMov() {
-        return fetch(`${url}/movie/now_playing?api_key=${api_key}&language=en-US&page=1`)
-            .then(response => {
-                return response.json()
-            })
-            .then(responseJson => {
-                // console.log(responseJson);
-                if (responseJson.results && responseJson.total_results !== 0) {
-                    return Promise.resolve(responseJson.results);
-                } else {
-                    return Promise.reject(`movies not found`)
-                }
-            })
-    }
-}
-
-class Detail {
-    static fetchMov(movie_id) {
-        return fetch(`${url}/movie/${movie_id}?api_key=${api_key}&language=en-US`)
+        return fetch(`${url}/movie/now_playing?api_key=${api_key}&language=en-US&page=1&region=US`)
             .then(response => {
                 return response.json()
             })
@@ -54,6 +37,5 @@ class Detail {
 
 export {
     DataSource,
-    Main,
-    Detail
+    Main
 };

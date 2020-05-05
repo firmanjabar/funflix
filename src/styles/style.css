@@ -20,7 +20,7 @@ movie-list {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 32px;
+    margin-top: 10px;
     padding: 16px;
 }
 
@@ -38,6 +38,10 @@ movie-item {
     /* For browsers that do not support gradients */
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0));
     /* Standard syntax (must be last) */
+}
+
+#category {
+    text-transform: capitalize;
 }
 
 @media only screen and (max-width: 600px) {
