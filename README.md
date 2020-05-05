@@ -1,5 +1,12 @@
 # FunFlix
 
+Link: [funflix.netlify.app](https://funflix.netlify.app)
+
+command:
+- `npm i` untuk menginstall package yang digunakan.
+- `npm run dev` untuk menjalankan project dlm mode development.
+- `npm run build` untuk menjalankan project dlm mode production.
+
 Final Submission dari Kelas [Belajar Fundamental Front-End Web Development - Dicoding](https://www.dicoding.com/academies/163).
 
 Web App ini digunakan untuk melihat data Movies category "Now Playing" dan Fitur Search dari [themoviedb.org](https://developers.themoviedb.org/3/getting-started/introduction).
@@ -8,6 +15,7 @@ Fitur :
 - Home [x]
 - Search [x]
 - Detail [ ]
+- Carousel [ ]
 
 ---
 
