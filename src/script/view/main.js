@@ -36,6 +36,7 @@ const main = () => {
     const mainView = async () => {
         try {
             const result = await Main.fetchMov();
+            document.getElementById("category").innerHTML = `<h4 id="category" class="text-white">Now Playing :</h4>`;
             renderResult(result);
         } catch (message) {
             fallbackResult(message);

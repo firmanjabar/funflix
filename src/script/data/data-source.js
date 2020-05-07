@@ -20,7 +20,7 @@ class DataSource {
 
 class Main {
     static fetchMov() {
-        return fetch(`${url}/movie/now_playing?api_key=${api_key}&language=en-US&page=1&region=US`)
+        return fetch(`${url}/movie/now_playing?api_key=${api_key}&language=en-US&page=1`)
             .then(response => {
                 return response.json()
             })
